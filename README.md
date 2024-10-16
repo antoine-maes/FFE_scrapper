@@ -19,7 +19,7 @@ Ce projet est un scrapper pour vérifier l'ouverture des inscriptions à un conc
     ```env
     PASSWORD="votre_mot_de_passe"
     FROM="votre_email@gmail.com"
-    TO="email_destinataire@example.com"
+    TO="email_destinataire@example.com,autre_email_destinataire@example.com"
     ```
 
 ## Utilisation
