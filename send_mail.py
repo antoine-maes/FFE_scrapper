@@ -9,7 +9,7 @@ load_dotenv()
 def envoyer_mail(subject, body):
     password = os.environ.get('PASSWORD')
     sender_email = os.environ.get('FROM')
-    receiver_email = os.environ.get('TO')
+    receiver_emails = os.environ.get('TO').split(',')
     login = sender_email
 
     smtp_server="smtp.gmail.com"
@@ -19,7 +19,7 @@ def envoyer_mail(subject, body):
         # Créer l'objet de message
         msg = MIMEMultipart()
         msg['From'] = sender_email
-        msg['To'] = receiver_email
+        msg['To'] = ','.join(receiver_emails)  # Joindre les emails avec des virgules
         msg['Subject'] = subject
 
         # Ajouter le corps du message
@@ -33,7 +33,7 @@ def envoyer_mail(subject, body):
 
         # Envoyer l'email
         print("Envoi de l'email...")
-        server.sendmail(sender_email, receiver_email, msg.as_string())
+        server.sendmail(msg["From"], msg["To"].split(","), msg.as_string())
 
         print("Email envoyé avec succès")
         server.quit()
