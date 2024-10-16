@@ -1,0 +1,50 @@
+# Environnements virtuels
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuration de l'IDE
+.vscode/
+.idea/
+
+# Fichiers de log
+*.log
+
+# Dépendances installées
+*.egg-info/
+dist/
+build/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Fichiers de test
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Fichiers de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Fichiers de base de données
+*.sqlite3
+
+# Fichiers de configuration de l'application
+config.yaml
+config.json
